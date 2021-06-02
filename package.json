@@ -4,7 +4,14 @@
   "description": "Node-RED UI widget node",
   "author": "sanlike",
   "license": "Apache",
-  "main": "ui_status_chart.js",
+  "keywords": [
+    "node-red",
+    "dashboard",
+    "status chart",
+    "chart",
+    "widget"
+  ],
+  "main": "none",
   "scripts": {
     "test": "mocha \"src/**/test/*_spec.js\"",
     "dev": "ts-node src/lower-case.ts",
@@ -17,7 +24,7 @@
   "node-red": {
     "version": ">=1.0.0",
     "nodes": {
-      "ui_status_chart": "ui_status_chart.js"
+      "ui_status_chart": "nodes/ui_status_chart.js"
     }
   },
   "dependencies": {
@@ -41,12 +48,5 @@
   "bugs": {
     "url": "https://github.com/sanlike0911/node-red-contrib-ui_status_chart/issues"
   },
-  "homepage": "https://github.com/sanlike0911/node-red-contrib-ui_status_chart#readme",
-  "keywords": [
-    "node-red",
-    "dashboard",
-    "status chart",
-    "chart",
-    "widget"
-  ]
+  "homepage": "https://github.com/sanlike0911/node-red-contrib-ui_status_chart#readme"
 }

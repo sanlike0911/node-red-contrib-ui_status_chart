@@ -2,7 +2,7 @@
 
 A Node-RED widget node for showing the chart of status.
 
-![ui_status_chart](./figs/sample00.png) "example")
+![ui_status_chart](./figs/sample00.png)
 
 ## Pre-requisites
 
