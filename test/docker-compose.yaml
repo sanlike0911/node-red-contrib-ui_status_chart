@@ -3,7 +3,7 @@ services:
   nodeRed:
     build: .
     image: nodered/node-red:latest
-    container_name: nodeRed
+    container_name: nodeRED
     environment:
       - TZ=Asia/Tokyo
     ports:
