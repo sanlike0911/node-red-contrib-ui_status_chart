@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-ui_status_chart",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node-RED UI widget node",
   "author": "sanlike",
   "license": "Apache",
@@ -28,6 +28,7 @@
     }
   },
   "dependencies": {
+    "node-red-dashboard": "^2.29.1",
     "moment": "^2.29.1"
   },
   "devDependencies": {
