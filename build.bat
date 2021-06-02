@@ -13,6 +13,7 @@ xcopy /Y /S /E figs\ dist\figs\ & ^
 copy /Y LICENSE dist & ^
 copy /Y package.json dist & ^
 copy /Y readme.md dist & ^
+xcopy /Y /S /E dist\* nodes\ & ^
 xcopy /Y /S /E dist\* test\data\dev\your-node-red\ & ^
 docker exec -it %nodeRedContainerName% bash -c "cd /data/ && npm install ./dev/your-node-red/ && exit" & ^
 docker restart %nodeRedContainerName%
