@@ -6,15 +6,12 @@ set nodeRedContainerName=nodeRED
 
 rem build and install
 npm run build & ^
-xcopy /Y /S /E src\icons\ dist\icons\ & ^
-xcopy /Y /S /E src\locales\ dist\locales\ & ^
-copy /Y src\*.html dist & ^
-xcopy /Y /S /E figs\ dist\figs\ & ^
-copy /Y LICENSE dist & ^
-copy /Y package.json dist & ^
-copy /Y readme.md dist & ^
-xcopy /Y /S /E dist\* nodes\ & ^
-xcopy /Y /S /E dist\* test\data\dev\your-node-red\ & ^
-docker exec -it %nodeRedContainerName% bash -c "cd /data/ && npm install ./dev/your-node-red/ && exit" & ^
+xcopy /Y /S /E src\locales\ nodes\locales\ & ^
+copy /Y src\*.html nodes\ & ^
+xcopy /Y /S /E dist\* nodes\* & ^
+md test\data\your-node\nodes\ & ^
+copy /Y package.json test\data\your-node\ & ^
+xcopy /Y /S /E nodes\* test\data\your-node\nodes\* & ^
+docker exec -it %nodeRedContainerName% bash -c "cd /data/ && npm install ./your-node && exit" & ^
 docker restart %nodeRedContainerName%
 pause

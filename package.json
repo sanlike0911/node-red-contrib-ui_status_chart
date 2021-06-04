@@ -14,8 +14,8 @@
   "main": "none",
   "scripts": {
     "test": "mocha \"src/**/test/*_spec.js\"",
-    "dev": "ts-node src/lower-case.ts",
-    "dev:watch": "ts-node-dev --respawn src/lower-case.ts",
+    "dev": "ts-node src/ui_status_chart.ts",
+    "dev:watch": "ts-node-dev --respawn src/ui_status_chart.ts",
     "clean": "rimraf dist/*",
     "tsc": "tsc",
     "build": "npm-run-all clean tsc",
