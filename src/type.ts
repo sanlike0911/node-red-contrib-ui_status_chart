@@ -1,9 +1,6 @@
 import { NodeDef } from "node-red";
 
 declare namespace statusChart {
-    interface statusChartApp {
-
-    }
     interface appConfigBase {
         confsel: string;
         item: string;
@@ -23,11 +20,11 @@ declare namespace statusChart {
         statusColor: string;
         statusValue: string;
         statusLabel: string;
-    };
+    }
     
     interface statusColorListDef {
         [key: string]: string;
-    };
+    }
 
     type graphDataObject = {
         datetime: Date;
@@ -51,9 +48,11 @@ declare namespace statusChart {
         topic?: string;
     }
 
-    interface nodeConf extends NodeDef, appConfigBase {};
-    interface graphDataDef extends graphDataObject {};
-    interface makeMegDef extends makeMsgBase, nodeRedMsgBase {};
-    interface inputNodeMsgDef extends nodeRedMsgBase, graphDataObject {};
+    interface nodeConf extends NodeDef, appConfigBase {}
+    interface graphDataDef extends graphDataObject {}
+    interface makeMegDef extends makeMsgBase, nodeRedMsgBase {}
+    interface inputNodeMsgDef extends nodeRedMsgBase, graphDataObject {}
 
 }
+
+export default statusChart; 

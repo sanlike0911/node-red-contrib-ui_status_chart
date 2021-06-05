@@ -1,5 +1,5 @@
-import { NodeInitializer, Node/*, NodeDef*/ } from "node-red";
-import { statusChart } from "./ui_status_chart.d";
+import { NodeInitializer, Node } from "node-red";
+import statusChart from "./type";
 import moment from 'moment';
 
 const nodeInit: NodeInitializer = (RED): void => {
