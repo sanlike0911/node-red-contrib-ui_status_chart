@@ -75,7 +75,47 @@ ui_status_chart node is a UI widget that can be used to display the chart of sta
     ]
     ```
 
-- example
+- Build and install
+
+    You can use this command to build and install.
+
+    ```cmd
+    .\build.bat
+    ```
+
+    ※windows only.
+
+- Debug
+
+    Use nodejs `--inspect` to debug. Execute the following command.
+
+    ```cmd
+    $ npm start
+    > node-red-contrib-ui-status-chart@x.x.x start C:\Hisashi\Project\node-red\node-red-contrib-ui-status-chart    
+    > node --inspect-brk=0.0.0.0:9229 ./node_modules/node-red/red.js --userDir ./data --settings ./data/settings.js
+
+    Debugger listening on ws://0.0.0.0:9229/{guid}
+    For help, see: https://nodejs.org/en/docs/inspector
+    ```
+
+    Use VS Code's built-in debugger.
+
+    launch.json
+
+    ```json
+    {
+        "type": "node",
+        "request": "attach",
+        "name": "Attach to Node-RED",
+        "port": 9229,
+        "address": "localhost",
+        "localRoot": "${workspaceFolder}\\data\\your-node\\nodes",
+        "remoteRoot": "${workspaceFolder}",
+        "protocol": "inspector"
+    }
+    ```
+
+- Node-RED flow example
 
     ```json
     [
@@ -469,3 +509,28 @@ ui_status_chart node is a UI widget that can be used to display the chart of sta
         }
     ]
     ```
+
+## Folder structure
+
+```cmd
+root
+│
+├─data  ※ node-RED work folder
+│
+├─dist  ※ Build output folder
+│
+├─figs
+│
+├─nodes
+│
+├─src   ※ Development folder
+│  ├─icons
+│  │
+│  └─locales
+│     ├─en-US
+│     │
+│     └─ja
+│
+├─node_modules
+│
+```
